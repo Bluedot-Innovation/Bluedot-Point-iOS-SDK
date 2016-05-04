@@ -1,0 +1,5 @@
+Bluedot Point SDK iOS v1.7 Release Notes
+----------------------------------------
+
+- Enhancement: Improvements to internal algorithms. 
+- The version number of the Point SDK is reported to the backend as part of the CheckIn Notification 

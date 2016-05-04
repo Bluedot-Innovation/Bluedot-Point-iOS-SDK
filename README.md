@@ -20,7 +20,7 @@ You can find [documentation](http://docs.bluedotinnovation.com/display/DEVDOC10/
 ## Copyright and license
 
 Created by Bluedot Innovation in 2016.
-Copyright © 2016 Bluedot. All rights reserved.
+Copyright © 2016 Bluedot Innovation. All rights reserved.
 
 By dowloading or using the Bluedot Point SDK for iOS, You agree to the Bluedot Terms and Conditions (https://www.zendesk.com/company/terms)
 and Privacy Policy (http://www.bluedotinnovation.com/html/downloads/pdfs/privacy-policy-bluedot-170815.pdf)

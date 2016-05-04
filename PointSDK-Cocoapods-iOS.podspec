@@ -10,6 +10,9 @@ Pod::Spec.new do |s|
 
     Point SDK Cocoapods iOS
 
+    Created by Bluedot Innovation in 2016.
+    Copyright © 2016 Bluedot Innovation. All rights reserved.
+
     By dowloading or using the Bluedot Point SDK for iOS, You agree to the Bluedot Terms and Conditions
     https://www.zendesk.com/company/terms and Privacy Policy http://www.bluedotinnovation.com/html/downloads/pdfs/privacy-policy-bluedot-170815.pdf
     and Billing Policy http://www.bluedotinnovation.com/html/downloads/pdfs/privacy-policy-bluedot-170815.pdf
@@ -18,7 +21,7 @@ Pod::Spec.new do |s|
     LICENSE
   }
   s.author = { "Bluedot Innovation" => "http://www.bluedotinnovation.com" }
-  s.source = { :git => 'https://github.com/Bluedot-Innovation/Bluedot-Point-iOS-SDK.git', :tag => s.version.to_s }
+  s.source = { :git => 'https://github.com/Bluedot-Innovation/PointSDK-Cocoapods-iOS.git', :tag => s.version.to_s }
   s.platform = :ios
   s.ios.deployment_target = '7.0'
   s.requires_arc = true

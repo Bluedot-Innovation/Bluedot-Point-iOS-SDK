@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name = "Bluedot-Point-iOS-SDK"
+  s.name = "PointSDK-Cocoapods-iOS"
   s.version = "1.7"
   s.summary = "Bluedot Innovation's cutting edge location services solution - the Bluedot Point SDK - is powering the most innovative location-based apps for iOS and Android.
   Deliver creative content and collect valuable analytics using Bluedot Innovation's powerful, precise and easy-to-use location services technology."
@@ -8,9 +8,9 @@ Pod::Spec.new do |s|
     :type => 'Copyright',
     :text => <<-LICENSE
 
-    Bluedot iOS SDK
+    Point SDK Cocoapods iOS
 
-    By dowloading or using the Bluedot iOS SDK, You agree to the Bluedot Terms and Conditions
+    By dowloading or using the Bluedot Point SDK for iOS, You agree to the Bluedot Terms and Conditions
     https://www.zendesk.com/company/terms and Privacy Policy http://www.bluedotinnovation.com/html/downloads/pdfs/privacy-policy-bluedot-170815.pdf
     and Billing Policy http://www.bluedotinnovation.com/html/downloads/pdfs/privacy-policy-bluedot-170815.pdf
     and acknowledge that such terms govern Your use of and access to the iOS SDK.

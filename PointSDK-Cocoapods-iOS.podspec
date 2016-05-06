@@ -30,6 +30,6 @@ Pod::Spec.new do |s|
   s.library = 'z'
   s.frameworks = 'AudioToolbox', 'AVFoundation', 'CoreGraphics', 'CoreLocation', 'CoreMotion', 'Foundation', 'MapKit', 'QuartzCore', 'SystemConfiguration', 'UIKit'
   s.weak_framework = 'CoreData', 'Foundation'
-  s.source_files = 'BDPointSDK/include/*.h'
-  s.vendored_libraries = 'BDPointSDK/libBDPointSDK-iphoneos.a', 'BDPointSDK/libBDPointSDK-iphonesimulator.a'
+  s.source_files = 'PointSDK-Cocoapods-iOS/include/*.h'
+  s.vendored_libraries = 'PointSDK-Cocoapods-iOS/libBDPointSDK-iphoneos.a', 'PointSDK-Cocoapods-iOS/libBDPointSDK-iphonesimulator.a'
 end

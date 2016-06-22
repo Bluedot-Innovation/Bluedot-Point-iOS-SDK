@@ -1,9 +1,7 @@
-
-/****
- *    BDAuthenticationState.h
- *
- *    Copyright (C) 2015 Bluedot Innovation.  All rights reserved.
- */
+//
+//  Created by Bluedot Innovation
+//  Copyright (c) 2016 Bluedot Innovation. All rights reserved.
+//
 
 /**
 * Represents the current authentication state between the device and the Bluedot Point API back-end.

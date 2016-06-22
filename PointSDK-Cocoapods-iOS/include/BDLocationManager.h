@@ -1,13 +1,7 @@
-
-// __BD_APPLE_ONLY__
-
-/****
- *    BDLocationManager.h
- *
- *    Implement the Bluedot location manager enhanced functionality.
- *
- *    Copyright (C) 2015 Bluedot Innovation.  All rights reserved.
- */
+//
+//  Created by Bluedot Innovation
+//  Copyright (c) 2016 Bluedot Innovation. All rights reserved.
+//
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>

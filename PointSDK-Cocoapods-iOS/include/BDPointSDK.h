@@ -7,6 +7,7 @@
  *    Copyright (C) 2015 Bluedot.  All rights reserved.
  */
 
+// Apple classes
 #ifdef __APPLE__
 #import <UIKit/UIKit.h>
 #import "BDLocationManager.h"

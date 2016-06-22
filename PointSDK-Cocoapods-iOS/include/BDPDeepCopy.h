@@ -1,8 +1,7 @@
-/****
- *    BDPDeepCopy.h
- *
- *    Copyright (C) 2015 Bluedot Innovation.  All rights reserved.
- */
+//
+//  Created by Bluedot Innovation
+//  Copyright (c) 2016 Bluedot Innovation. All rights reserved.
+//
 
 #import <Foundation/Foundation.h>
 

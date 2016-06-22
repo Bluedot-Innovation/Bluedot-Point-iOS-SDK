@@ -1,10 +1,9 @@
-/****
- *    NSString+BDURLEncoding.h
- *
- *    Implements a wrapper around URL encoding.
- *
- *    Copyright (C) 2015 Bluedot Innovation.  All rights reserved.
- */
+//
+//  Created by Bluedot Innovation
+//  Copyright (c) 2016 Bluedot Innovation. All rights reserved.
+//
+//  Implements a wrapper around URL encoding.
+//
 
 #import <Foundation/Foundation.h>
 

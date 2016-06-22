@@ -8,11 +8,11 @@ The Bluedot Point SDK enables mobile apps to trigger any action (like opening we
 
 You can also reference this repository as a CocoaPods:
 
-````
+```
 source 'https://github.com/CocoaPods/Specs.git'
 
 pod 'PointSDK-Cocoapods-iOS'
-````
+```
 ## Documentation
 
 You can find [documentation](http://docs.bluedotinnovation.com/display/DEVDOC10/iOS+SDK) for the SDK and [release notes](http://docs.bluedotinnovation.com/display/DEVDOC10/Version+Release+Notes) on http://docs.bluedotinnovation.com.

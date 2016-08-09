@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.author = { "Bluedot Innovation" => "http://www.bluedotinnovation.com" }
   s.source = { :git => 'https://github.com/Bluedot-Innovation/PointSDK-Cocoapods-iOS.git', :tag => s.version.to_s }
   s.platform = :ios
-  s.ios.deployment_target = '7.0'
+  s.ios.deployment_target = '8.0'
   s.requires_arc = true
   s.documentation_url = 'http://docs.bluedotinnovation.com'
   s.library = 'z'

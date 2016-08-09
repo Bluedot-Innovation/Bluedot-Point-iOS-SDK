@@ -59,6 +59,11 @@
 @property (nonatomic) BDLocationSpeed  speed;
 
 /**
+ * The location method provider of the device at the point of the location
+ */
+@property (nonatomic, readonly) NSString *provider;
+
+/**
  * Publicly available methods for evaluating locations.
  */
 - (BOOL)isEqual: (id)other;

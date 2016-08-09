@@ -2,8 +2,6 @@
 //  Created by Bluedot Innovation
 //  Copyright (c) 2016 Bluedot Innovation. All rights reserved.
 //
-//  Implements a wrapper around URL encoding.
-//
 
 #import <Foundation/Foundation.h>
 

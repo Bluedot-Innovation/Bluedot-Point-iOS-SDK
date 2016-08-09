@@ -55,21 +55,24 @@
  * @param coordinate The location of the device when the custom action was triggered.
  * @param date The date and time when the custom action was triggered.
  * @param willCheckOut Whether a subsequent Check Out callback is expected when the device moves a significant distance away from the Fence.
+ * @param customData The custom fields setup from "Dashboard" in the <b>Point Access</b> web-interface.</p>
  */
 - (void)didCheckIntoFence: (BDFenceInfo *)fence
                    inZone: (BDZoneInfo *)zoneInfo
              atCoordinate: (BDLocationCoordinate2D)coordinate
                    onDate: (NSDate *)date
-             willCheckOut: (BOOL)willCheckOut;
+             willCheckOut: (BOOL)willCheckOut
+           withCustomData: (NSDictionary *)customData;
 
 /**
  * <p>This method has been deprecated as of version 1.6; it will be removed in a future version.</p>
- * @deprecated Use @ref didCheckIntoFence:inZone:atCoordinate:onDate:willCheckOut:
+ * @deprecated Use @ref didCheckIntoFence:inZone:atCoordinate:onDate:willCheckOut:withCustomData:
  */
 - (void)didCheckIntoFence: (BDFenceInfo *)fence
                    inZone: (BDZoneInfo *)zoneInfo
              atCoordinate: (BDLocationCoordinate2D)coordinate
-                   onDate: (NSDate *)date;
+                   onDate: (NSDate *)date
+           withCustomData: (NSDictionary *)customData;
 
 /**
  * <p>Implement this method to provide your own <b>Custom Action</b> when checking out of fence.</p>
@@ -81,20 +84,23 @@
  * @param createZoneInfo The zone containing the entered fence.
  * @param date The date and time when the custom action was triggered.
  * @param withDuration The dwell time minutes of the device within a fence.
+ * @param customData The custom fields setup from "Dashboard" in the <b>Point Access</b> web-interface.</p>
  */
 - (void)didCheckOutFromFence: (BDFenceInfo *)fence
                       inZone: (BDZoneInfo *)zoneInfo
                       onDate: (NSDate *)date
-                withDuration: (NSUInteger)checkedInDuration;
+                withDuration: (NSUInteger)checkedInDuration
+              withCustomData: (NSDictionary *)customData;
 
 /**
  * <p>This method has been deprecated as of version 1.6; it will be removed in a future version.</p>
- * @deprecated Use @ref didCheckIntoBeacon:inZone:withProximity:onDate:willCheckOut:
+ * @deprecated Use @ref didCheckIntoBeacon:inZone:withProximity:onDate:willCheckOut:withCustomData:
  */
 - (void)didCheckIntoBeacon: (BDBeaconInfo *)beacon
                     inZone: (BDZoneInfo *)zoneInfo
              withProximity: (CLProximity)proximity
-                    onDate: (NSDate *)date;
+                    onDate: (NSDate *)date
+            withCustomData: (NSDictionary *)customData;
 
 /**
  * <p>Implement this method to provide your own <b>Custom Action</b> when a Zone is triggered by entering the configured proximity of a Beacon.</p>
@@ -112,12 +118,14 @@
  * @param proximity The proximity of the beacon when the custom action was triggered.
  * @param date The date and time when the custom action was triggered.
  * @param willCheckOut Whether a subsequent Check Out callback is expected when the device moves outside of the Beacon's range.
+ * @param customData The custom fields setup from "Dashboard" in the <b>Point Access</b> web-interface.</p>
  */
 - (void)didCheckIntoBeacon: (BDBeaconInfo *)beacon
                     inZone: (BDZoneInfo *)zoneInfo
              withProximity: (CLProximity)proximity
                     onDate: (NSDate *)date
-              willCheckOut: (BOOL)willCheckOut;
+              willCheckOut: (BOOL)willCheckOut
+            withCustomData: (NSDictionary *)customData;
 
 /**
  * <p>Implement this method to provide your own <b>Custom Action</b> when checking out of beacon.</p>
@@ -130,12 +138,14 @@
  * @param proximity The proximity of the beacon when the check-in was triggered.
  * @param date The date and time when the custom action was triggered.
  * @param withDuration The dwell time minutes of the device within the range of a beacon.
+ * @param customData The custom fields setup from "Dashboard" in the <b>Point Access</b> web-interface.</p>
  */
 - (void)didCheckOutFromBeacon: (BDBeaconInfo *)beacon
                        inZone: (BDZoneInfo *)zoneInfo
                 withProximity: (CLProximity)proximity
                        onDate: (NSDate *)date
-                 withDuration: (NSUInteger)checkedInDuration;
+                 withDuration: (NSUInteger)checkedInDuration
+               withCustomData: (NSDictionary *)customData;
 
 /**
  * <p>These methods can be implemented to monitor whether the Bluetooth

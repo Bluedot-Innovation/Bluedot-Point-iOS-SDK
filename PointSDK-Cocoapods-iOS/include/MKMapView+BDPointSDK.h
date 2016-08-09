@@ -2,8 +2,6 @@
 //  Created by Bluedot Innovation
 //  Copyright (c) 2016 Bluedot Innovation. All rights reserved.
 //
-//  Additional functionality to the MKMapView for processing overlays.
-//
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>

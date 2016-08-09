@@ -86,6 +86,12 @@
 @property (readonly) BDAuthenticationState authenticationState;
 
 /**
+ * A collection of @ref BDZoneInfo objects, corresponding to the Zones you created for this application, in the
+ * <b>Point Access</b> web-interface.
+ */
+@property (nonatomic, readonly) NSSet* zoneInfos;
+
+/**
   Disabled or re-enable a specific @ref BDZoneInfo "zone".  Information about valid @ref BDZoneInfo "zones", including
   their respective <i>zoneId</i>'s for use in this method, is delivered to BDPLocationDelegate::didUpdateZoneInfo:.
  */

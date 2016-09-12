@@ -1,13 +1,12 @@
-Bluedot Point SDK iOS v1.8 Release Notes
+Bluedot Point SDK iOS v1.8.1 Release Notes
 ----------------------------------------
-New feature:
-The iOS SDK can deliver to the app any custom data set on the custom action on the backend as a parameter in fence and beacon call back methods.
-- (void)didCheckIntoFence:inZone:atCoordinate:onDate:willCheckOut:withCustomData:
-- (void)didCheckIntoBeacon:inZone:withProximity:onDate:willCheckOut:withCustomData:
-- (void)didCheckOutFromFence:inZone:onDate:withDuration:withCustomData:
-- (void)didCheckOutFromBeacon:inZone:withProximity:onDate:withDuration:withCustomData:
-The custom data can be added and managed using the Point Access user interface or the public APIs.
-Enhancement:
-- `zoneInfos` is now available as a new property through `BDLocationManager` to access all the zone related information which were setup in Point Access user interface.
+New feature: 
+The iOS SDK can deliver to the app the current location service authorization status as a parameter in the user interval call back methods.
+- (void)didStartRequiringUserInterventionForLocationServicesAuthorizationStatus:authorizationStatus
+- (void)didStopRequiringUserInterventionForLocationServicesAuthorizationStatus:authorizationStatus
+Enhancements:
+Zones that are disabled at device level stay disabled across user sessions.
+The lack of data connection can cause the Check-Ins to be queued within the SDK. The SDK is able to persist the failed Check-In records and batch process at a later point when the data connectivity is re-established.
+Fully compatible with iOS 10
 Defect fixes:
-- General defect fixes
+General minor defect fixes 

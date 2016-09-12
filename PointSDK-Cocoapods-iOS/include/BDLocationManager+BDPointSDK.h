@@ -95,7 +95,7 @@
   Disabled or re-enable a specific @ref BDZoneInfo "zone".  Information about valid @ref BDZoneInfo "zones", including
   their respective <i>zoneId</i>'s for use in this method, is delivered to BDPLocationDelegate::didUpdateZoneInfo:.
  */
-- (BOOL)setZone: (NSString *)zoneId disableByApplication: (BOOL)disable;
+- (void)setZone: (NSString *)zoneId disableByApplication: (BOOL)disable;
 
 - (BOOL)isZoneDisabledByApplication: (NSString *)zoneId;
 

@@ -39,7 +39,6 @@
  * <b>Point Access</b> web-interface.
  */
 - (void)didUpdateZoneInfo: (NSSet *)zoneInfos;
-
 /**
  * <p>Implement this method to provide your own <b>Custom Action</b> when a Zone is triggered by entering a Fence.</p>
  *
@@ -165,16 +164,19 @@
 /**
  * <p>These methods can be implemented to monitor whether iOS Location Services are in a valid state while the SDK is authenticated with Point Access.</p>
  *
- * <p>If Point SDK is authenticated with Point Access and Location Services have not been enabled, then didStartRequiringUserInterventionForLocationServices will be called.</p>
- * <p>Thereafter, if the Point SDK logs out from the authenticated state, then didStopRequiringUserInterventionForLocationServices is called.</p>
+ * <p>If Point SDK is authenticated with Point Access and Location Services have not been enabled or set to "Never" or "While Using"
+ *    then didStartRequiringUserInterventionForLocationServicesAuthorizationStatus will be called.</p>
+ * <p>Thereafter, if the Point SDK logs out from the authenticated state, then didStopRequiringUserInterventionForLocationServicesAuthorizationStatus: is called.</p>
  * <p>If Location Services are both required and enabled, then these callbacks will not be invoked.</p>
+ * @param authorizationStatus The current authorization status of the calling application.
+ *
  */
-- (void)didStartRequiringUserInterventionForLocationServices;
+- (void)didStartRequiringUserInterventionForLocationServicesAuthorizationStatus: (CLAuthorizationStatus)authorizationStatus;
 
 /**
  * <p>Please refer to @ref didStartRequiringUserInterventionForLocationServices.</p>
  */
-- (void)didStopRequiringUserInterventionForLocationServices;
+- (void)didStopRequiringUserInterventionForLocationServicesAuthorizationStatus: (CLAuthorizationStatus)authorizationStatus;
 
 /**
  * <p>These methods can be implemented to monitor whether the iOS 'Low Power Mode' has been enabled while the SDK is authenticated with Point Access.</p>

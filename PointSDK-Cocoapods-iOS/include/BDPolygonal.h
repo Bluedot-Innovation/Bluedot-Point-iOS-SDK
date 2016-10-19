@@ -13,8 +13,8 @@
   <p>@ref BDPolygonal is an abstract type and cannot be instantiated directly.</p>
   <p>Instead, instantiate one of its concrete sub-classes.</p>
 
-  @see @ref BDPolygon
-  @see @ref BDLineString
+  @see details in @ref BDPolygon
+  @see details in @ref BDLineString
 */
 @interface BDPolygonal : BDGeometry
 

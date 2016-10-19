@@ -1,12 +1,8 @@
-Bluedot Point SDK iOS v1.8.1 Release Notes
+Bluedot Point SDK iOS v1.9 Release Notes
 ----------------------------------------
-New feature: 
-The iOS SDK can deliver to the app the current location service authorization status as a parameter in the user interval call back methods.
-- (void)didStartRequiringUserInterventionForLocationServicesAuthorizationStatus:authorizationStatus
-- (void)didStopRequiringUserInterventionForLocationServicesAuthorizationStatus:authorizationStatus
+New feature:
+Real-Time data synchronisation feature allows for data syncs to occur between the back-end and the mobile devices immediately when locations and settings change on the back-end. The iOS SDK provides API for triggering rule syncs through Google Firebase messaging services.
 Enhancements:
-Zones that are disabled at device level stay disabled across user sessions.
-The lack of data connection can cause the Check-Ins to be queued within the SDK. The SDK is able to persist the failed Check-In records and batch process at a later point when the data connectivity is re-established.
-Fully compatible with iOS 10
+Check-out is now tracked even if the app is closed and re-launched after the check-in event to provide more accurate dwell-time.
 Defect fixes:
-General minor defect fixes 
+General minor defect fixes

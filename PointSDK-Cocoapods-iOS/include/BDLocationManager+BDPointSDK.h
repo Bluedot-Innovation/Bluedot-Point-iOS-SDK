@@ -17,7 +17,7 @@
 /**
   @brief Provides <b>Point SDK</b> specific authentication methods and delegate properties to @ref BDLocationManager.
 
-  @see @ref BDLocationManager for unified documentation of the class, including this Category.
+  @see details in @ref BDLocationManager for unified documentation of the class, including this Category.
 */
 @interface BDLocationManager (BDPointSDK) <BDPAuthenticationStateProvider>
 
@@ -106,5 +106,11 @@
  * installation.
  */
 - (NSString*)installRef;
+
+/**
+ * Notifies <b>Point SDK</b> that the push notification has been received with given data.
+ * @param data Push data passed through AppDelegate callback methods.
+ */
+- (void)notifyPushUpdateWithData: (NSDictionary *)data;
 
 @end

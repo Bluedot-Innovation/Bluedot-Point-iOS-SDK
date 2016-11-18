@@ -1,8 +1,3 @@
-Bluedot Point SDK iOS v1.9 Release Notes
+Bluedot Point SDK iOS v1.9.1 Release Notes
 ----------------------------------------
-New feature:
-Real-Time data synchronisation feature allows for data syncs to occur between the back-end and the mobile devices immediately when locations and settings change on the back-end. The iOS SDK provides API for triggering rule syncs through Google Firebase messaging services.
-Enhancements:
-Check-out is now tracked even if the app is closed and re-launched after the check-in event to provide more accurate dwell-time.
-Defect fixes:
-General minor defect fixes
+Minor defect fixes and improvements to enhance performance and stability.

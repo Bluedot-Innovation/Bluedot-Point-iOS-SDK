@@ -1,11 +1,7 @@
-/****
- *    BDPointSDK.h
- *
- *    This header file encapsulates the public functionality available from the Bluedot location manager and additional functionality
- *    within the SDK.
- *
- *    Copyright (C) 2015 Bluedot.  All rights reserved.
- */
+//
+//  Created by Bluedot Innovation
+//  Copyright © 2016 Bluedot Innovation. All rights reserved.
+//
 
 // Apple classes
 #ifdef __APPLE__
@@ -31,6 +27,7 @@
 #import "BDZoneInfo.h"
 #import "BDFenceInfo.h"
 #import "BDBeaconInfo.h"
+#import "BDLocationInfo.h"
 #import "BDPointSessionException.h"
 
 // Bluedot protocols

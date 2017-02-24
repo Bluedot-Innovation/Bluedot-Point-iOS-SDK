@@ -1,14 +1,12 @@
 //
 //  Created by Bluedot Innovation
-//  Copyright (c) 2016 Bluedot Innovation. All rights reserved.
+//  Copyright © 2016 Bluedot Innovation. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
 #import "BDPSpatialObjectInfo.h"
-
-@class BDLocation;
 
 /**
 @brief Information about a BLE Beacon, as defined in Point Access.

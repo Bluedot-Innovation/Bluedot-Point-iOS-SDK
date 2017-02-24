@@ -1,5 +1,4 @@
-Bluedot Point SDK iOS v1.9.3 Release Notes
+Bluedot Point SDK iOS v1.9.4 Release Notes
 ----------------------------------------
-This release contains optimisations to the Bluedot engine to improve battery performance.
-Motion and Activity permission request is no longer required therefore 'NSMotionUsageDescription' can be removed from the project's info.plist.
+This release introduces support for triggering actions based on the Sequential, Bearing and Speed conditions configured at the Zone level on the Bluedot backend.
 Minor defect fixes and improvements to enhance performance and stability.

@@ -1,6 +1,6 @@
 //
 //  Created by Bluedot Innovation
-//  Copyright (c) 2016 Bluedot Innovation. All rights reserved.
+//  Copyright © 2016 Bluedot Innovation. All rights reserved.
 //
 
 #ifdef BDPlatformApple
@@ -13,6 +13,7 @@ typedef CLLocationDegrees      BDLocationDegrees;
 typedef CLLocationDistance     BDLocationDistance;
 typedef CLLocationAccuracy     BDLocationAccuracy;
 typedef CLLocationSpeed        BDLocationSpeed;
+typedef CLLocationDirection    BDLocationDirection;
 
 /**
 @brief Alias of CLLocationCoordinate2D
@@ -34,6 +35,7 @@ typedef double BDLocationDegrees;
 typedef double BDLocationDistance;
 typedef double BDLocationAccuracy;
 typedef double BDLocationSpeed;
+typedef double BDLocationDirection;
 
 /**
 @brief Alias of CLLocationCoordinate2D
@@ -59,3 +61,9 @@ BDLocationCoordinate2D BDLocationCoordinate2DMake(BDLocationDegrees latitude, BD
 #define kBDLocationAccuracyGPS       kBDLocationAccuracyNearestTenMeters
 #define kBDLocationAccuracyWifi      kBDLocationAccuracyHundredMeters
 #define kBDLocationAccuracyCellTower kBDLocationAccuracyThreeKilometers
+
+#define kBDLocationInvalidDegrees   -1.0
+#define kBDLocationInvalidDistance  -1.0
+#define kBDLocationInvalidAccuracy   0.0
+#define kBDLocationInvalidSpeed     -1.0
+#define kBDLocationInvalidDirection -1.0

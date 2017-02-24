@@ -1,21 +1,10 @@
 //
 //  Created by Bluedot Innovation
-//  Copyright (c) 2016 Bluedot Innovation. All rights reserved.
+//  Copyright © 2016 Bluedot Innovation. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
-#import <CoreBluetooth/CBCentralManager.h>
-
-extern CLLocationAccuracy
-    BDCoreLocation_MinimumAccuracy,
-    BDCoreLocation_MaximumAccuracy;
-
-@protocol BDPVariableAccuracyLocationSensor;
-@protocol BDPHeadingSensor;
-@protocol BDPBearingSensor;
-@protocol BDPBeaconSensor;
-
 
 /**
 @brief Entry-point for your Application's interaction with <b>Point SDK</b>.

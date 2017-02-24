@@ -1,6 +1,6 @@
 //
 //  Created by Bluedot Innovation
-//  Copyright (c) 2016 Bluedot Innovation. All rights reserved.
+//  Copyright © 2016 Bluedot Innovation. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -10,6 +10,7 @@
 @class BDZoneInfo;
 @class BDFenceInfo;
 @class BDBeaconInfo;
+@class BDLocationInfo;
 
 /**
   @brief Defines the call-backs which <b>Point SDK</b> makes to inform the Application of location-related events.
@@ -18,11 +19,11 @@
   shared @ref BDLocationManager instance, to handle location related callbacks.</p>
 
   <p>Callbacks inform the application when:
-<ul>
-<li>...new Zones have been received from <b>Point Access</b></li>
-<li>...the user has triggered a <b>Custom Notification</b> action</li>
-</ul>
-</p>
+  <ul>
+  <li>...new Zones have been received from <b>Point Access</b></li>
+  <li>...the user has triggered a <b>Custom Notification</b> action</li>
+  </ul>
+  </p>
 */
 @protocol BDPLocationDelegate <NSObject>
 
@@ -39,10 +40,11 @@
  * <b>Point Access</b> web-interface.
  */
 - (void)didUpdateZoneInfo: (NSSet *)zoneInfos;
+
 /**
  * <p>Implement this method to provide your own <b>Custom Action</b> when a Zone is triggered by entering a Fence.</p>
  *
- * <p>This method and @ref didCheckIntoBeacon:inZone:withProximity:onDate:willCheckOut:withCustomData: are both optional.<br/>
+ * <p>This method and @ref didCheckIntoBeacon:inZone:atLocation:withProximity:willCheckOut:withCustomData: are both optional.<br/>
  * Implement them according to whether you have Custom Actions in your geo-location scenario, and whether those actions
  * may be triggered by entering Fences, Beacon proximities, or both.</p>
  *
@@ -51,28 +53,27 @@
  *
  * @param fence The fence that the user entered in order to trigger this custom action.
  * @param zoneInfo The zone containing the entered fence.
- * @param coordinate The location of the device when the custom action was triggered.
- * @param date The date and time when the custom action was triggered.
+ * @param location The location relevant information of the device when the custom action was triggered.
  * @param willCheckOut Whether a subsequent Check Out callback is expected when the device moves a significant distance away from the Fence.
  * @param customData The custom fields setup from "Dashboard" in the <b>Point Access</b> web-interface.</p>
+ */
+- (void)didCheckIntoFence: (BDFenceInfo *)fence
+                   inZone: (BDZoneInfo *)zoneInfo
+               atLocation: (BDLocationInfo *)location
+             willCheckOut: (BOOL)willCheckOut
+           withCustomData: (NSDictionary *)customData;
+
+/**
+ * <p>This method has been deprecated as of version 1.9.4; it will be removed in a future version.</p>
+ * @deprecated Use @ref didCheckIntoFence:inZone:atLocation:willCheckOut:withCustomData:
  */
 - (void)didCheckIntoFence: (BDFenceInfo *)fence
                    inZone: (BDZoneInfo *)zoneInfo
              atCoordinate: (BDLocationCoordinate2D)coordinate
                    onDate: (NSDate *)date
              willCheckOut: (BOOL)willCheckOut
-           withCustomData: (NSDictionary *)customData;
-
-/**
- * <p>This method has been deprecated as of version 1.6; it will be removed in a future version.</p>
- * @deprecated Use @ref didCheckIntoFence:inZone:atCoordinate:onDate:willCheckOut:withCustomData:
- */
-- (void)didCheckIntoFence: (BDFenceInfo *)fence
-                   inZone: (BDZoneInfo *)zoneInfo
-             atCoordinate: (BDLocationCoordinate2D)coordinate
-                   onDate: (NSDate *)date
            withCustomData: (NSDictionary *)customData
-__attribute__((deprecated("Use method didCheckIntoFence:inZone:atCoordinate:onDate:willCheckOut:withCustomData: instead")));
+__attribute__((deprecated("Use method didCheckIntoFence:inZone:atLocation:willCheckOut:withCustomData: instead")));
 
 /**
  * <p>Implement this method to provide your own <b>Custom Action</b> when checking out of fence.</p>
@@ -96,7 +97,7 @@ __attribute__((deprecated("Use method didCheckIntoFence:inZone:atCoordinate:onDa
  * <p>Implement this method to provide your own <b>Custom Action</b> when a Zone is triggered by entering the configured proximity of a Beacon.</p>
  * <p>This configuration can be made in the Management section of each Zone in the <b>Point Access</b> web-interface.</p>
  *
- * <p>This method and @ref didCheckIntoFence:inZone:atCoordinate:onDate:willCheckOut:withCustomData: are both optional.<br/>
+ * <p>This method and @ref didCheckIntoFence:inZone:atLocation:willCheckOut:withCustomData: are both optional.<br/>
  * Implement them according to whether you have Custom Actions in your geo-location scenario, and whether those actions
  * may be triggered by entering Fences, Beacon proximities or both.</p>
  *
@@ -105,28 +106,29 @@ __attribute__((deprecated("Use method didCheckIntoFence:inZone:atCoordinate:onDa
  *
  * @param beacon The beacon that the user entered the required proximity of, in order to trigger this custom action.
  * @param zoneInfo The zone containing the beacon in proximity.
+ * @param locationInfo The location of beacon when the custom action was triggered.
  * @param proximity The proximity of the beacon when the custom action was triggered.
- * @param date The date and time when the custom action was triggered.
  * @param willCheckOut Whether a subsequent Check Out callback is expected when the device moves outside of the Beacon's range.
  * @param customData The custom fields setup from "Dashboard" in the <b>Point Access</b> web-interface.</p>
+ */
+- (void)didCheckIntoBeacon: (BDBeaconInfo *)beacon
+                    inZone: (BDZoneInfo *)zoneInfo
+                atLocation: (BDLocationInfo *)locationInfo
+             withProximity: (CLProximity)proximity
+              willCheckOut: (BOOL)willCheckOut
+            withCustomData: (NSDictionary *)customData;
+
+/**
+ * <p>This method has been deprecated as of version 1.9.4; it will be removed in a future version.</p>
+ * @deprecated Use @ref didCheckIntoBeacon:inZone:atLocation:withProximity:willCheckOut:withCustomData:
  */
 - (void)didCheckIntoBeacon: (BDBeaconInfo *)beacon
                     inZone: (BDZoneInfo *)zoneInfo
              withProximity: (CLProximity)proximity
                     onDate: (NSDate *)date
               willCheckOut: (BOOL)willCheckOut
-            withCustomData: (NSDictionary *)customData;
-
-/**
- * <p>This method has been deprecated as of version 1.6; it will be removed in a future version.</p>
- * @deprecated Use @ref didCheckIntoBeacon:inZone:withProximity:onDate:willCheckOut:withCustomData:
- */
-- (void)didCheckIntoBeacon: (BDBeaconInfo *)beacon
-                    inZone: (BDZoneInfo *)zoneInfo
-             withProximity: (CLProximity)proximity
-                    onDate: (NSDate *)date
             withCustomData: (NSDictionary *)customData
-__attribute__((deprecated("Use method didCheckIntoBeacon:inZone:withProximity:onDate:willCheckOut:withCustomData: instead")));
+__attribute__((deprecated("Use method didCheckIntoBeacon:inZone:atLocation:withProximity:willCheckOut:withCustomData: instead")));
 
 /**
  * <p>Implement this method to provide your own <b>Custom Action</b> when checking out of beacon.</p>

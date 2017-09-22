@@ -1,4 +1,7 @@
-Bluedot Point SDK iOS v1.9.4 Release Notes
+Bluedot Point SDK iOS v1.9.5 Release Notes
 ----------------------------------------
-This release introduces support for triggering actions based on the Sequential, Bearing and Speed conditions configured at the Zone level on the Bluedot backend.
-Minor defect fixes and improvements to enhance performance and stability.
+Enhancements:
+The SDK is now fully compatible with iOS 11.
+
+Defect fixes:
+General minor defect fixes

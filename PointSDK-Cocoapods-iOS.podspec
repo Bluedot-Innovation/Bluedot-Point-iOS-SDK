@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "PointSDK-Cocoapods-iOS"
-  s.version = "1.9.4"
+  s.version = "1.9.5"
   s.summary = "The Bluedot Point SDK is powering the most innovative location-based apps for iOS and Android."
   s.description = "Bluedot Innovation's cutting edge location services solution - the Bluedot Point SDK - is powering the most innovative location-based apps for iOS and Android.
   Deliver creative content and collect valuable analytics using Bluedot Innovation's powerful, precise and easy-to-use location services technology."
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.documentation_url = 'http://docs.bluedotinnovation.com'
   s.library = 'z'
-  s.frameworks = 'AudioToolbox', 'AVFoundation', 'CoreGraphics', 'CoreLocation', 'CoreMotion', 'Foundation', 'MapKit', 'QuartzCore', 'SystemConfiguration', 'UIKit'
+  s.frameworks = 'CoreGraphics', 'CoreLocation', 'CoreMotion', 'Foundation', 'MapKit', 'QuartzCore', 'SystemConfiguration', 'UIKit'
   s.weak_framework = 'CoreData', 'Foundation'
   s.source_files = 'PointSDK-Cocoapods-iOS/include/*.h'
   s.resources = 'PointSDK-Cocoapods-iOS/BDDataModel.bundle'

@@ -170,7 +170,7 @@ __attribute__((deprecated("Use method didCheckIntoBeacon:inZone:atLocation:withP
  *
  * <p>If Point SDK is authenticated with Point Access and Location Services have not been enabled or set to "Never" or "While Using"
  *    then didStartRequiringUserInterventionForLocationServicesAuthorizationStatus will be called.</p>
- * <p>Thereafter, if the Point SDK logs out from the authenticated state, then didStopRequiringUserInterventionForLocationServicesAuthorizationStatus: is called.</p>
+ * <p>Thereafter, if Location Services have been set to "Always Allow", or if Point SDK logs out from the authenticated state, then didStopRequiringUserInterventionForLocationServicesAuthorizationStatus: is called.</p>
  * <p>If Location Services are both required and enabled, then these callbacks will not be invoked.</p>
  * @param authorizationStatus The current authorization status of the calling application.
  *

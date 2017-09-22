@@ -105,12 +105,17 @@
  * This reference is randomly generated at the first run-time of the App and remains fixed for the duration of the App
  * installation.
  */
-- (NSString*)installRef;
+- (NSString *)installRef;
 
 /**
  * Notifies <b>Point SDK</b> that the push notification has been received with given data.
  * @param data Push data passed through AppDelegate callback methods.
  */
 - (void)notifyPushUpdateWithData: (NSDictionary *)data;
+
+/**
+ * Returns the version of the Point SDK as a NSString.
+ */
+- (NSString *)sdkVersion;
 
 @end

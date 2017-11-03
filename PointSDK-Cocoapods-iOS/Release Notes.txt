@@ -1,7 +1,4 @@
-Bluedot Point SDK iOS v1.9.5 Release Notes
+Bluedot Point SDK iOS v1.9.6 Release Notes
 ----------------------------------------
-Enhancements:
-The SDK is now fully compatible with iOS 11.
-
 Defect fixes:
 General minor defect fixes
